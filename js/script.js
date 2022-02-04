@@ -12,7 +12,12 @@ const app = new Vue({
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
                 return console.table(res.data.response);
             })
-        }
+        },
+
+        //# generiamo un TOT mail
+        getRandomMails(number) {
+
+        },
     },
 
     //# con created invochiamo al caricamento della pagina la nostra funzione
