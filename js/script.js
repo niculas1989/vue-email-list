@@ -5,7 +5,7 @@ console.log('axios ok', axios);
 Vue.config.devtools = true;
 
 const app = new Vue({
-    el: 'root',
+    el: '#root',
     data: {
         emails: [
             'pippo@gmail.com',
