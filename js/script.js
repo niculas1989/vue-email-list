@@ -10,6 +10,8 @@ const app = new Vue({
         emails: [],
     },
     methods: {
+        getRandomMail() {
 
+        }
     },
 })
