@@ -26,8 +26,8 @@ const app = new Vue({
 
     //# con created invochiamo al caricamento della pagina la nostra funzione
     mounted() {
-        this.getRandomMail();
-        //this.getRandomMails(this.totalMails);
+        // this.getRandomMail();
+        this.getRandomMails(this.totalMails);
     },
 })
 
