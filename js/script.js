@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#root',
     data: {
         emails: [],
+        totalMails: 10,
     },
     methods: {
         //# generalizziamo una funzione per prendere almeno una mail randomica
