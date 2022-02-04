@@ -15,6 +15,7 @@ const app = new Vue({
     data: {
         emails: [],
         totalMails: 10,
+        currentIndex: undefined,
     },
     methods: {
         //# generalizziamo una funzione per prendere almeno una mail randomica
@@ -23,7 +24,6 @@ const app = new Vue({
                 if (!this.emails.includes(res.data.response))
                     //! effettivo "riempimento" dell'array
                     this.emails.push(res.data.response);
-
             })
         },
 
