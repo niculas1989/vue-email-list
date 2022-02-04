@@ -7,10 +7,9 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#root',
     data: {
-        emails: [
-            'pippo@gmail.com',
-            'pluto@libero.it',
-            'paperino@boolean.it'
-        ]
-    }
+        emails: [],
+    },
+    methods: {
+
+    },
 })
