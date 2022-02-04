@@ -16,13 +16,16 @@ const app = new Vue({
 
         //# generiamo un TOT mail
         getRandomMails(number) {
-
+            for (i = 0; i < number; i++) {
+                this.getRandomMail();
+            }
         },
     },
 
     //# con created invochiamo al caricamento della pagina la nostra funzione
     created() {
         this.getRandomMail();
+        this.getRandomMails(this.totalMails);
     },
 })
 
