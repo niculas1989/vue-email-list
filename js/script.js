@@ -10,7 +10,9 @@ const app = new Vue({
         //# generalizziamo una funzione per prendere almeno una mail randomica
         getRandomMail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
-                return console.table(res.data.response);
+                console.log(res.data.response);
+
+                this.emails.push(res.data.response);
             })
         },
 
@@ -23,9 +25,9 @@ const app = new Vue({
     },
 
     //# con created invochiamo al caricamento della pagina la nostra funzione
-    created() {
+    mounted() {
         this.getRandomMail();
-        this.getRandomMails(this.totalMails);
+        //this.getRandomMails(this.totalMails);
     },
 })
 
