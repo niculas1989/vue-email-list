@@ -20,8 +20,6 @@ const app = new Vue({
         //# generalizziamo una funzione per prendere almeno una mail randomica
         getRandomMail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
-                console.log(res.data.response);
-
                 //! effettivo "riempimento" dell'array
                 this.emails.push(res.data.response);
             })
