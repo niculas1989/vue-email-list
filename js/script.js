@@ -1,7 +1,3 @@
-console.log('Vue ok', Vue);
-console.log('axios ok', axios);
-
-
 Vue.config.devtools = true;
 
 const app = new Vue({
@@ -10,8 +6,17 @@ const app = new Vue({
         emails: [],
     },
     methods: {
+        //# generalizziamo una funzione per prendere almeno una mail randomica
         getRandomMail() {
-
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
+                return console.table(res.data.response);
+            })
         }
     },
+    created() {
+        this.getRandomMail();
+    },
 })
+
+
+
