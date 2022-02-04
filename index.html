@@ -15,12 +15,16 @@
 <body>
 
     <div id="root">
-        <div>
-            <ol v-if="emails.length === totalMails">
-                <li v-for="email in emails">{{email}}</li>
-            </ol>
-            <div v-else class="spinner-border text-danger" role="status">
-                <span class="visually-hidden">Loading...</span>
+        <h3 class="text-center">Lista email:</h3>
+        <div class="container">
+            <!-- generazione automatica mail -->
+            <ul v-if="emails.length === totalMails" class="list-group my-3">
+                <li v-for="email in emails" class="list-group-item">{{email}}</li>
+            </ul>
+            <!-- lodaing -->
+            <div v-else class="d-flex align-items-center justify-content-center">
+                <strong>Loading...</strong>
+                <div class="spinner-border text-danger" role="status" aria-hidden="true"></div>
             </div>
         </div>
 

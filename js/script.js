@@ -22,6 +22,7 @@ const app = new Vue({
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
                 //! effettivo "riempimento" dell'array
                 this.emails.push(res.data.response);
+
             })
         },
 
