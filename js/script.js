@@ -13,6 +13,8 @@ const app = new Vue({
             })
         }
     },
+
+    //# con created invochiamo al caricamento della pagina la nostra funzione
     created() {
         this.getRandomMail();
     },
